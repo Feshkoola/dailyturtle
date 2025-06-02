@@ -1,0 +1,162 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #fff5f5;
+  color: #222;
+}
+
+header {
+  background: #b71c1c;
+  color: #fff;
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #ffd6d6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ff5252;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+article {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(183, 28, 28, 0.08);
+  margin-bottom: 2rem;
+  padding: 1.5rem; /* Changed from 0 to 1.5rem for inner spacing */
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+article:hover {
+  box-shadow: 0 4px 16px rgba(183, 28, 28, 0.15);
+}
+
+.story-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 1.5rem;
+}
+
+.story-link:hover h2 {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+
+.story-img {
+  width: 100%;
+  max-height: 700px; /* Increased from 220px */
+  height: auto; /* Ensures all images are tall */
+  object-fit: cover;
+  border-bottom: 3px solid #b71c1c;
+  margin-bottom: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+article h2 {
+  margin-top: 0;
+  color: #b71c1c;
+}
+
+footer {
+  background: #b71c1c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* ...existing code... */
+
+.grid-main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.grid-main article {
+  box-sizing: border-box;
+  max-width: 350px;
+  min-width: 280px;
+  flex: 1 1 300px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Tablet: stack two columns */
+@media (max-width: 900px) {
+  .grid-main {
+    gap: 1.5rem;
+  }
+  .grid-main article {
+    max-width: 48%;
+    min-width: 0;
+    flex: 1 1 48%;
+  }
+}
+
+/* Phone: stack one column */
+@media (max-width: 600px) {
+  .grid-main {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 40px; /* Add horizontal padding */
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .grid-main article {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .story-img {
+    max-height: auto;
+    height: auto;
+    object-fit: cover;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  nav ul {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ...existing code... */
